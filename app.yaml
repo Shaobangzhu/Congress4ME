@@ -1,0 +1,24 @@
+application: congress-app
+version: 1
+runtime: php55
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /dirPagination\.js
+  static_files: dirPagination.js
+  upload: dirPagination\.js
+  
+- url: /congressApp\.js
+  static_files: congressApp.js
+  upload: congressApp\.js
+
+- url: /congressApp\.php
+  script: congressApp.php
+
+- url: .*
+  script: congressApp.html
